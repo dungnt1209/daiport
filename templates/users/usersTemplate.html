@@ -1,0 +1,6 @@
+<select name="username" id="list-user">
+  <option value="">-Please option-</option>
+  <% _.each(users, function(user,index) { %>
+  <option value="<%= user.get('id') %>" data-uid="<%= user.get('uid') %>"><%= user.get('fullname') %></option>
+  <% }); %>
+</select>

@@ -1,0 +1,27 @@
+<canvas id="chart-area" width="300" height="300"/>
+<script>
+  <% _.each(charts, function(chart,index) { %>
+    <% console.log(chart.get('work_time'));console.log(chart.get('wait_time')); %>
+    var work_time = <%= chart.get('work_time') %>;
+    var wait_time = <%= chart.get('wait_time') %>;
+    if(work_time == 0){
+      wait_time = 100;
+    }
+  <% }); %>
+  var pieData = [
+    {
+      value: work_time,
+      color: "#46BFBD",
+      highlight: "#5AD3D1",
+      label: "Work time"
+    },
+    {
+      value: wait_time,
+      color:"#F7464A",
+      highlight: "#FF5A5E",
+      label: "Wait time"
+    }
+  ];
+  var ctx = document.getElementById("chart-area").getContext("2d");
+  window.myPie = new Chart(ctx).Pie(pieData);
+</script>

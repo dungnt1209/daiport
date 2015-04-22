@@ -1,0 +1,5 @@
+<select name="action">
+  <% _.each(actions, function(action,index) { %>
+  <option value="<%= action.get('id') %>"><%= action.get('name') %></option>
+  <% }); %>
+</select>

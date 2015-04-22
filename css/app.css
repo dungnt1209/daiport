@@ -1,0 +1,14 @@
+.btn-filter {
+  background: #0000FF;
+  padding: 5px 10px;
+  display: inline-block;
+  color: #fff;
+  text-decoration: none;
+}
+
+.box-filter .group {
+  display: none;
+}
+.box-filter.show .group {
+  display: block;
+}

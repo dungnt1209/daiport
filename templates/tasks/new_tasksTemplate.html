@@ -1,0 +1,111 @@
+    <section class="panel panel-default">
+      <div class="col-lg-12" id="main-content">
+        <section class="panel panel-default" id="taskTemplate">
+          <header class="panel-heading font-bold">Add task</header>
+          <div class="panel-body" id="main">
+            <form id="frmTask" class="form-horizontal">
+              <div class="form-group">
+                <label class="col-lg-3 control-label">Daily</label>
+                <div class="col-lg-9">
+                  <input type="text" readonly name="date" id="date" class="form-control datepicker-input" data-date-format="yyyy-mm-dd" placeholder="yyyy/mm/dd"/>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-lg-3 control-label">Check in</label>
+                <div class="col-lg-9">
+                  <div class="row">
+                    <div class="col-lg-5">
+                      <span id="chInHour" class="form-control"></span>
+                    </div>
+                    <div class="col-lg-2 text-center">:</div>
+                    <div class="col-lg-5">
+                      <span id="chInMins" class="form-control"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-lg-3 control-label">Check-out</label>
+                <div class="col-lg-9">
+                  <div class="row">
+                    <div class="col-lg-5">
+                      <span id="chOutHour" class="form-control"></span>
+                    </div>
+                    <div class="col-lg-2 text-center">:</div>
+                    <div class="col-lg-5">
+                     <span id="chOutMins" class="form-control"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-lg-3 control-label">Rest time</label>
+                <div class="col-lg-9">
+                  <div class="row">
+                    <div class="col-lg-5">
+                      <span id="restHour" class="form-control"></span>
+                    </div>
+                    <div class="col-lg-2 text-center">:</div>
+                    <div class="col-lg-5">
+                      <span id="restMins" class="form-control"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="tasks">
+                <div class="panel panel-default panel-task">
+                  <div class="panel-body">
+                    Task :
+                    <div class="form-group">
+                      <label class="col-lg-3 control-label">Project</label>
+                      <div class="col-lg-9">
+                        <span class="projects"></span>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-lg-3 control-label">Client</label>
+                      <div class="col-lg-9">
+                        <span class="clients"></span>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-lg-3 control-label">Bugs type</label>
+                      <div class="col-lg-9">
+                        <span class="actions"></span>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-lg-3 control-label">Description</label>
+                      <div class="col-lg-9">
+                        <textarea rows="5" name="des" class="form-control"></textarea>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-lg-3 control-label">Execution time</label>
+                      <div class="col-lg-9">
+                        <div class="row">
+                          <div class="col-lg-5">
+                            <span class="exeHour form-control" id="exeHour"></span>
+                          </div>
+                          <div class="col-lg-2 text-center">:</div>
+                          <div class="col-lg-5">
+                            <span class="exeMins form-control" id="exeMins"></span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <a href="javascript:void(0)" data-handle="remove" class="btnRemove btn btn-rounded btn-sm btn-icon btn-danger"><i class="fa fa-minus"></i></a>
+                  </div>
+                </div>
+              </div>
+              <div id="buttons">
+                <a href="#" id="btnAdd" class="btn btn-rounded btn-sm btn-icon btn-info"><i class="fa fa-plus"></i></a>
+                <a id="btnSubmit" class="btn btn-s-md btn-primary">Submit</a>
+              </div>
+            </form>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+</section>

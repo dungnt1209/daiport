@@ -1,0 +1,16 @@
+<% _.each(lists, function(item,index) { %>
+<tr>
+  <td><%= item.get('daily').working_date %></td>
+  <td><%= item.get('daily').check_in %> - <%= item.get('daily').check_out %></td>
+</tr>
+<tr>
+  <td colspan="2">
+    <% _.each(item.get('tasks'),function(task){ %>
+    <div>
+      Project Name: <%= task.project_name %><br/>
+      Action name: <%= task.action_name %> - <%= task.working_hours %>
+    </div>
+    <% })%>
+  </td>
+</tr>
+<% }); %>
